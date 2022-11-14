@@ -3,6 +3,7 @@
 Console.Write ("Введите число больше 1: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int num = 1;
+int evenNum = num % 2;
 
 if (number < 1)
 {
@@ -11,9 +12,23 @@ if (number < 1)
 
 else
 {
-    while (num <= number)
+    if (evenNum == 0)
     {
-        Console.Write(num + " ");
-        num ++;
+        while (num <= number)
+        {
+            Console.Write(num + " ");
+            num+=2;
+        }
     }
+
+    else
+    {
+        num++;
+        while (num <= number)
+        {
+            Console.Write(num + " ");
+            num+=2;
+        }
+    }
+
 }
